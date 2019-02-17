@@ -68,3 +68,7 @@ if (!($downloadHash -eq $goodHash))
 # Add MySQL to Path
 $env:path += ";C:\MySQL\bin"
 setx PATH $env:path /M
+
+# creates data folder
+
+mkdir $installedPath\data

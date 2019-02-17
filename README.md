@@ -20,15 +20,15 @@ If you were using chocolately you could just run the following:
 
 ### Actions
 
-Currently this script carries out the following:
-Downloads the -noinstaller version of MySQL Server Community 8.0.15.0 as an archive
-Compares MD5 - exits on no match
-Unzips the archive
-Renames the unpacked folder
-Copies the unpacked folder to C:\MySQL
-Clears up temp download folder 
-Adds mysql to path
-creates data/ in the MySQL directory 
+1. Currently this script carries out the following:
+2. Downloads the -noinstaller version of MySQL Server Community 8.0.15.0 as an archive
+3. Compares MD5 - exits on no match
+4. Unzips the archive
+5. Renames the unpacked folder
+6. Copies the unpacked folder to C:\MySQL
+7. Clears up temp download folder 
+8. Adds mysql to path
+9. creates data/ in the MySQL directory 
 
 ### Futher reading:
 https://dev.mysql.com/downloads/mysql/

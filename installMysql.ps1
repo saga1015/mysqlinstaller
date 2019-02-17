@@ -90,10 +90,15 @@ Write-Host "Clearing up after myself"
 Remove-Item -path $downloadDirectory -recurse
     
 
-# Add MySQL to Path
-Write-Host "Adding C:\MySQL\bin to path"
-$env:path += ";C:\MySQL\bin"
-setx PATH $env:path /M
+# Check if MySQL is in path, add if missing
+
+if($env:Path -like "*$installedPath\bin*") {
+       Write-Host "$installedPath\bin already exists in Path statement" }
+    else {
+            Write-Host "Adding C:\MySQL\bin to path"
+            $env:path += ";C:\MySQL\bin"
+            setx PATH $env:path /M 
+        }
 
 # creates data folder
 Write-host "Make $datapath"

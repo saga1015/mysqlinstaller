@@ -34,3 +34,7 @@ If you were using chocolately you could just run the following:
 https://dev.mysql.com/downloads/mysql/
 https://dev.mysql.com/doc/refman/8.0/en/windows-install-archive.html
 https://blogs.technet.microsoft.com/canitpro/2016/10/18/step-by-step-installing-mysql-on-nano-server-via-powershell/
+
+### Possible improvements
+- Try/Catch on each operation for more detailed error handling
+- Moving version specific vars to a seperate file, allowing the same script to load different versions based on a parameter

@@ -47,22 +47,23 @@ if (!($downloadHash -eq $goodHash))
   }
 
   
-    # Test Expand Directory, make if not present
-    If (!(Test-Path $expandDirectory)) {
-        New-Item -ItemType Directory -Force -Path $expandDirectory
+# Test Expand Directory, make if not present
+If (!(Test-Path $expandDirectory))
+    {
+    New-Item -ItemType Directory -Force -Path $expandDirectory
     }
 
-    #Unzip to correct location
-    Expand-Archive $downloadPath -DestinationPath $expandDirectory
+#Unzip to correct location
+Expand-Archive $downloadPath -DestinationPath $expandDirectory
 
-    #Rename directory
-    Rename-Item $unzippedDirectory $renamedDirectory
+#Rename directory
+Rename-Item $unzippedDirectory $renamedDirectory
 
-    #Move unzipped directory
-    Copy-Item -Path $renamedDirectory -Destination C:\ -Force -recurse
+#Move unzipped directory
+Copy-Item -Path $renamedDirectory -Destination C:\ -Force -recurse
 
-    #Clearup
-    Remove-Item -path $downloadDirectory -recurse
+#Clearup
+Remove-Item -path $downloadDirectory -recurse
     
 
 # Add MySQL to Path

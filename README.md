@@ -39,3 +39,4 @@ https://blogs.technet.microsoft.com/canitpro/2016/10/18/step-by-step-installing-
 - Try/Catch on each operation for more detailed error handling (ran out of time)
 - Moving version specific vars to a seperate file, allowing the same script to load different versions based on a parameter
 - Checks for existance of data folder
+- Initialising MySQL, not just installation
